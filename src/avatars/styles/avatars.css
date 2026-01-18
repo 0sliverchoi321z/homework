@@ -1,1 +1,72 @@
-/* 여기에 스타일을 구현해 주세요 */
+.avatars-section {
+  padding: 100px;
+  width: 336px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+div {
+  display: flex;
+  width: 536px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.avatars-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.avatars-list::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.avatars {
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.avatars img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.avatars .status {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #dbdbdb;
+  border: 2px solid #fff;
+}
+
+.avatars.online .status {
+  background-color: #4cfe88;
+}
