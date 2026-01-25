@@ -12,7 +12,7 @@ const stateText = ipBtn.querySelector('.state');
 
 ipBtn.addEventListener('click', () => {
   // 새창 열기
-  window.open('/src/login/pages/ip_security.html', '_blank', 'noopener');
+  window.open('./pages/ip_security.html', '_blank', 'noopener');
 
   // ON/OFF 토글
   const isOn = ipBtn.getAttribute('aria-pressed') === 'true';
