@@ -16,17 +16,20 @@ h2 {
   box-sizing: border-box;
 
   display: grid;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  align-items: start;
   justify-items: center;
   text-align: center;
   font-weight: 550;
   color: var(--white);
+
   background-image: image-set(url(./../products/ipad_pro.jpeg) 1x, url(./../products/ipad_pro_2x.jpeg) 2x);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
-  grid-template-rows: 0.5fr auto auto 1.7fr;
+  grid-template-rows: 0.1fr auto auto 1.9fr;
+  padding-top: var(--large-spacing);
 }
 
 /* 버튼 */
@@ -102,6 +105,7 @@ a {
 
 @media (min-width: 1024px) {
   .product-text-wrap {
+    padding-top: var(--extra-large-spacing);
     background-image: image-set(url(./../products/ipad_pro_wide.jpeg) 1x, url(./../products/ipad_pro_wide_2x.jpeg) 2x);
   }
 

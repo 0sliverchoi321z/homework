@@ -1,3 +1,93 @@
-@import "./card-component.css";
+@import './card-component.css';
 
 /* 카드 레이아웃 */
+.apple-wrap {
+  display: grid;
+  column-width: 150px;
+
+  .product-text-wrap {
+    margin-bottom: 1rem;
+    max-height: 600px;
+  }
+}
+
+.ipad-air {
+  color: var(--black);
+  background-image: image-set(url(./../products/ipad_air.jpeg) 1x, url(./../products/ipad_air_2x.jpeg) 2x);
+
+  .button {
+    &.button-fill {
+      background: var(--black);
+    }
+    &.button-outline {
+      color: var(--black);
+    }
+  }
+}
+
+.iphone15-pro {
+  background-image: image-set(url(./../products/iphone15_pro.jpeg) 1x, url(./../products/iphone15_pro_2x.jpeg) 2x);
+}
+
+.iphone15 {
+  color: var(--black);
+  background-image: image-set(url(./../products/iphone15.jpeg) 1x, url(./../products/iphone15_2x.jpeg) 2x);
+
+  .button {
+    &.button-fill {
+      background: var(--black);
+    }
+    &.button-outline {
+      color: var(--black);
+    }
+  }
+}
+
+.applewatch {
+  background-image: image-set(url(./../products/apple_watch.jpeg) 1x, url(./../products/apple_watch_2x.jpeg) 2x);
+}
+
+.mac-air {
+  color: var(--black);
+  background-image: image-set(url(./../products/macbook_air.jpeg) 1x, url(./../products/macbook_air_2x.jpeg) 2x);
+
+  .button {
+    &.button-fill {
+      background: var(--black);
+    }
+    &.button-outline {
+      color: var(--black);
+    }
+  }
+}
+
+.airpods-pro {
+  background-image: image-set(url(./../products/airpods_pro.jpeg) 1x, url(./../products/airpods_pro_2x.jpeg) 2x);
+}
+
+/* Large screen */
+@media (min-width: 1024px) {
+  .apple-wrap {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .product-1line {
+    grid-column: 1 / -1;
+  }
+
+  .product-2line {
+    display: inline-block;
+    column-count: 2;
+    grid-column: 1 / -1;
+    max-width: 100%;
+    align-items: start;
+  }
+
+  .ipad-air {
+    background-image: image-set(url(./../products/ipad_air_wide.jpeg) 1x, url(./../products/ipad_air_wide_2x.jpeg) 2x);
+  }
+  .iphone15-pro {
+    background-image: image-set(url(./../products/iphone15_pro_wide.jpeg) 1x, url(./../products/iphone15_pro_wide_2x.jpeg) 2x);
+  }
+}
