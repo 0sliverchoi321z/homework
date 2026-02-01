@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,38 @@
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/card-component.css" />
+    <script type="module" src="./ui-component.js"></script>
   </head>
   <body>
     <!-- 카드 컴포넌트 -->
-
+    <hr />
+    <h2>버튼</h2>
+    <div class="ui-component">
+      <button type="button" class="button button-fill">버튼</button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <div class="ui-component">
+      <button type="button" class="button button-outline">버튼</button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>카드 컴포넌트</h2>
+    <div class="ui-component">
+      <div class="product-text-wrap">
+        <p class="product-title">iPad Pro</p>
+        <div class="text-group">
+          <p>놀라우리만치 얇다</p>
+          <p>엄청나게 강력하다</p>
+          <p class="text-tba">출시일 추후 공개</p>
+        </div>
+        <div class="button-group">
+          <a href="/" class="button button-fill" aria-describedby="ipad-more">더 알아보기</a>
+          <p id="ipad-more" class="sr-only">iPad Pro 제품 설명 페이지로 이동합니다.</p>
+          <a href="/" class="button button-outline" aria-describedby="ipad-price">가격 보기</a>
+          <p id="ipad-price" class="sr-only">iPad Pro 가격 설명 페이지로 이동합니다.</p>
+        </div>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
   </body>
 </html>
